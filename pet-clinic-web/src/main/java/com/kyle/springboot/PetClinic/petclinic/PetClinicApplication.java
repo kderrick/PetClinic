@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic;
+package com.kyle.springboot.PetClinic.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
