@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
-            <groupId>com.kyle.petclinic</groupId>
+            <groupId>com.kyle.springboot</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
