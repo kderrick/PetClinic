@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic.petclinic;
+package com.kyle.springboot.PetClinic.model;
 
 public class Person {
     private String firstName;

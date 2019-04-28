@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic.petclinic;
+package com.kyle.springboot.PetClinic.model;
 
 import java.time.LocalDate;
 
