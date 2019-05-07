@@ -5,6 +5,7 @@
 	<artifactId>PetClinic</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
 
+
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
@@ -42,6 +43,14 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<doclint>none</doclint>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
