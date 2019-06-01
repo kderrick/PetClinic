@@ -1,11 +1,11 @@
 package com.kyle.springboot.PetClinic.services.map;
 
 import com.kyle.springboot.PetClinic.model.Pet;
-import com.kyle.springboot.PetClinic.services.CrudService;
+import com.kyle.springboot.PetClinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findall() {
