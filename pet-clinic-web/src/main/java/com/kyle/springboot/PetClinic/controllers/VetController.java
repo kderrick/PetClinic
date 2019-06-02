@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic.model.controllers;
+package com.kyle.springboot.PetClinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

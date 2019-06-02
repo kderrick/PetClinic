@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic.model;
+package com.kyle.springboot.PetClinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

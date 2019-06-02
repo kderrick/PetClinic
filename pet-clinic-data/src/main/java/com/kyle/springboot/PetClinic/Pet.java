@@ -1,6 +1,4 @@
-package com.kyle.springboot.PetClinic.model;
-
-import com.sun.xml.internal.rngom.parse.host.Base;
+package com.kyle.springboot.PetClinic;
 
 import java.time.LocalDate;
 

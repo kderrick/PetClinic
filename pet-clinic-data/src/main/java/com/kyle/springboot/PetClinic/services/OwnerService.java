@@ -1,6 +1,6 @@
 package com.kyle.springboot.PetClinic.services;
 
-import com.kyle.springboot.PetClinic.model.Owner;
+import com.kyle.springboot.PetClinic.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 

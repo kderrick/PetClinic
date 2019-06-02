@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic.model;
+package com.kyle.springboot.PetClinic;
 
 public class Person extends BaseEntity{
     private String firstName;

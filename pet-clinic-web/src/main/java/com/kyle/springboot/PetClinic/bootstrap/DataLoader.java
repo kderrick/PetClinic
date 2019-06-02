@@ -1,11 +1,9 @@
-package com.kyle.springboot.PetClinic.model.bootstrap;
+package com.kyle.springboot.PetClinic.bootstrap;
 
-import com.kyle.springboot.PetClinic.model.Owner;
-import com.kyle.springboot.PetClinic.model.Vet;
+import com.kyle.springboot.PetClinic.Owner;
+import com.kyle.springboot.PetClinic.Vet;
 import com.kyle.springboot.PetClinic.services.OwnerService;
 import com.kyle.springboot.PetClinic.services.VetService;
-import com.kyle.springboot.PetClinic.services.map.OwnerServiceMap;
-import com.kyle.springboot.PetClinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,10 +14,11 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
 
+
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

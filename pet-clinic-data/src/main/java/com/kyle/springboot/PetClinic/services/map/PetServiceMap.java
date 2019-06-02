@@ -1,10 +1,12 @@
 package com.kyle.springboot.PetClinic.services.map;
 
-import com.kyle.springboot.PetClinic.model.Pet;
+import com.kyle.springboot.PetClinic.Pet;
 import com.kyle.springboot.PetClinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
