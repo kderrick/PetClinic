@@ -1,4 +1,4 @@
-package com.kyle.springboot.PetClinic;
+package com.kyle.springboot.PetClinic.model;
 
 import java.io.Serializable;
 

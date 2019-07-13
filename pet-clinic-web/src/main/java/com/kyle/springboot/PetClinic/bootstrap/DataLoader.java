@@ -1,7 +1,7 @@
 package com.kyle.springboot.PetClinic.bootstrap;
 
-import com.kyle.springboot.PetClinic.Owner;
-import com.kyle.springboot.PetClinic.Vet;
+import com.kyle.springboot.PetClinic.model.Owner;
+import com.kyle.springboot.PetClinic.model.Vet;
 import com.kyle.springboot.PetClinic.services.OwnerService;
 import com.kyle.springboot.PetClinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;

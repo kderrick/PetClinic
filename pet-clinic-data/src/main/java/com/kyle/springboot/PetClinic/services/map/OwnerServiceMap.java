@@ -1,6 +1,6 @@
 package com.kyle.springboot.PetClinic.services.map;
 
-import com.kyle.springboot.PetClinic.Owner;
+import com.kyle.springboot.PetClinic.model.Owner;
 import com.kyle.springboot.PetClinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 

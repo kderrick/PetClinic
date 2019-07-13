@@ -1,6 +1,6 @@
 package com.kyle.springboot.PetClinic.services.map;
 
-import com.kyle.springboot.PetClinic.Vet;
+import com.kyle.springboot.PetClinic.model.Vet;
 import com.kyle.springboot.PetClinic.services.VetService;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.kyle.springboot.PetClinic.services.map;
 
-import com.kyle.springboot.PetClinic.BaseEntity;
+import com.kyle.springboot.PetClinic.model.BaseEntity;
 
 import java.util.*;
 
