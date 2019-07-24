@@ -11,4 +11,11 @@ public class IndexController {
         return "index";
 
     }
+
+
+    @RequestMapping("/oups")
+    public String oopsHandler() {
+
+        return "notimplemented";
+    }
 }
