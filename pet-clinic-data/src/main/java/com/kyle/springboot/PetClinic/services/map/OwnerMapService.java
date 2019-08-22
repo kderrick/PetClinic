@@ -5,17 +5,19 @@ import com.kyle.springboot.PetClinic.model.Pet;
 import com.kyle.springboot.PetClinic.services.OwnerService;
 import com.kyle.springboot.PetClinic.services.PetService;
 import com.kyle.springboot.PetClinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+@Profile({"default", "map"})
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
     private final PetService petServie;
 
-    public OwnerServiceMap(PetTypeService petTypeService, PetService petServie) {
+    public OwnerMapService(PetTypeService petTypeService, PetService petServie) {
         this.petTypeService = petTypeService;
         this.petServie = petServie;
     }
