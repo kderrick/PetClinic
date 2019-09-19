@@ -14,7 +14,9 @@ import java.util.Set;
 public class Owner extends Person {
 
     @Builder
-    public Owner(Long id, String address, String city, String telephone, Set<Pet> pets) {
+    public Owner(Long id, String address, String city, String telephone, Set<Pet> pets,
+                 String lastName, String firstName) {
+        super(id, firstName, lastName);
         this.address = address;
         this.city = city;
         this.telephone = telephone;
