@@ -10,10 +10,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-
+@ExtendWith(MockitoExtension.class)
 class OwnerSDJpaServiceTest {
     @Mock
     OwnerRepository ownerRepository;
@@ -25,13 +29,18 @@ class OwnerSDJpaServiceTest {
     @InjectMocks
     OwnerSDJpaService service;
 
+    private Owner returnOwner;
     @BeforeEach
     void setUp() {
+        returnOwner = Owner.builder().id(1l).lastName("Smith").build();
     }
 
     @Test
     void findByLastName() {
+        when(ownerRepository.findByLastName(any())).thenReturn(returnOwner);
         Owner smith = service.findByLastName("Smith");
+        assertEquals("Smith", smith.getLastName());
+        verify(ownerRepository).findByLastName(any());
     }
 
     @Test
