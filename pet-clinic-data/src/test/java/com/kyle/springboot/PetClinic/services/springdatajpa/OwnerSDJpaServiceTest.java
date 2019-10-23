@@ -12,6 +12,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
@@ -19,6 +22,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class OwnerSDJpaServiceTest {
+    public static final String SMITH = "Smith";
     @Mock
     OwnerRepository ownerRepository;
     @Mock
@@ -32,19 +36,29 @@ class OwnerSDJpaServiceTest {
     private Owner returnOwner;
     @BeforeEach
     void setUp() {
-        returnOwner = Owner.builder().id(1l).lastName("Smith").build();
+        returnOwner = Owner.builder().id(1l).lastName(SMITH).build();
     }
 
     @Test
+
     void findByLastName() {
         when(ownerRepository.findByLastName(any())).thenReturn(returnOwner);
-        Owner smith = service.findByLastName("Smith");
-        assertEquals("Smith", smith.getLastName());
+        Owner smith = service.findByLastName(SMITH);
+        assertEquals(SMITH, smith.getLastName());
         verify(ownerRepository).findByLastName(any());
     }
 
     @Test
     void findAll() {
+        Set<Owner> returnOwnersSet = new HashSet<Owner>();
+        returnOwnersSet.add(Owner.builder().id(1L).build());
+        returnOwnersSet.add(Owner.builder().id(2L).build());
+
+        when(ownerRepository.findAll()).thenReturn(returnOwnersSet);
+
+        Set<Owner> owners = service.findAll();
+        assertNotNull(owners);
+        assertEquals(2, owners.size());
     }
 
     @Test
